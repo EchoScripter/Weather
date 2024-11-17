@@ -1,0 +1,230 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex; /* Allow flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Keep input and output side by side */
+    align-items: flex-start; /* Align items to the start */
+    width: 100%;
+}
+
+/* Weather Input Section */
+.weather-input {
+    width: 30%; /* Fixed width for larger screens */
+    background: #105c69;
+    padding: 1rem 2.5rem;
+    position: fixed; /* Keeps it fixed for larger screens */
+    height: 100%; /* Fill the height */
+}
+
+.weatherIcon {
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: block;
+    height: 20%;
+    margin: 2rem auto;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.input-group input {
+    background: #f8f8f8;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-size: 1.1rem; /* Increase base font size for readability */
+    line-height: 1.5; /* Add line height for better readability */
+    border-radius: 6px;
+    width: 100%; /* Full width */
+    outline: none;
+    border: none;
+    padding-left: 4rem;
+}
+
+.input-group .fa-search {
+    position: absolute;
+    left: 1rem;
+    color: #909090;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* Weather Output Section */
+.weather-output {
+    width: 70%; /* Occupy remaining space */
+    position: fixed; /* Keeps it fixed for larger screens */
+    inset: 0;
+    margin-left: 30%; /* Adjust to match input width */
+    padding-top: 2.5rem;
+    background: #f6f6f6;
+    overflow: auto;
+    height: 100%; /* Fill the height */
+    padding: 1rem;
+    padding-top: 2.5rem;
+}
+
+/* Styling for .Hightlight and .Forecast Sections */
+.Hightlight, .Forecast {
+    display: grid;
+    gap: 1rem;
+    font-size: 1rem; /* Base font size for legibility */
+}
+
+.Hightlight {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+}
+
+.Forecast {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+}
+
+/* Forecast Card Hover Effect */
+.Hightlight div, .Forecast div {
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #78c1f3;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.Hightlight div:hover, .Forecast div:hover {
+    transform: translateY(-10px) scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+    background-color: #4a90e2; /* Changes background color */
+}
+
+/* Hover Effects for Icons */
+.Hightlight i, .Forecast i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Hightlight div:hover i, .Forecast div:hover i {
+    color: #ffffff; /* Change icon color to white on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+/* Specific Styling for Temperature */
+.temperature {
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
+}
+
+.temperature span {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Description, Date, and City Styling */
+.weather-input .feelsLike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city {
+    padding: 10px 0;
+    font-size: 1rem; /* Use readable font size */
+    line-height: 1.5; /* Add line height for better readability */
+}
+
+.forecast-desc {
+    color: white;
+    font-size: 1rem; /* Adjust font size for better readability */
+    text-align: center;
+    padding-bottom: 5px;
+    font-style: italic;
+}
+
+.description i {
+    font-size: 25px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .weather-input {
+        width: 100%; /* Full width for smaller screens */
+        position: relative; /* Remove fixed positioning */
+    }
+
+    .weather-output {
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width for smaller screens */
+        position: relative; /* Remove fixed positioning */
+    }
+
+    .temperature {
+        font-size: 4rem; 
+    }
+
+    .Hightlight {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium-sized screens */
+    }
+
+    .Forecast {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium-sized screens */
+    }
+
+    .input-group input {
+        font-size: 1.2rem;
+    }
+
+    .input-group .fa-search {
+        font-size: 24px; 
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .temperature {
+        font-size: 3.5rem; /* Increase font size for mobile devices */
+    }
+
+    .Hightlight div, .Forecast div {
+        height: auto; /* Let the height adjust automatically */
+    }
+
+    .Hightlight {
+        grid-template-columns: 1fr; /* 1 column for mobile devices */
+    }
+
+    .Forecast {
+        grid-template-columns: 1fr; 
+    }
+
+    .input-group input {
+        font-size: 1.1rem; 
+    }
+
+    .input-group .fa-search {
+        font-size: 26px; 
+    }
+
+    .weather-input .feelsLike,
+    .weather-input .description,
+    .weather-input .date,
+    .weather-input .city {
+        font-size: 1.1rem; 
+    }
+}
