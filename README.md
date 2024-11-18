@@ -40,4 +40,4 @@ A sleek and responsive weather application that provides current weather, detail
 Clone the repository:
 
 ```bash
-git clone https://github.com/YourUsername/modern-weather-app.git
+git clone https://github.com/EchoScripter/Weather.git
