@@ -12,11 +12,8 @@ A sleek and responsive weather application that provides current weather, detail
 - **Responsive Design**: Optimized for desktop and mobile devices.
 
 ## 📸 Screenshots
-
-(https://github.com/user-attachments/assets/8f06e01e-8446-4e40-9d5d-b345cb92da04)
-
-(https://github.com/user-attachments/assets/a3b90425-ab10-4963-b0b5-a4777af448e6)
-
+![ss1](https://github.com/user-attachments/assets/56aa35a0-3af2-4210-b285-da92e7da45a9)
+![ss2](https://github.com/user-attachments/assets/f67bb877-2fe5-46d5-9b98-db40b4f1857c)
 
 ## 🚀 Live Demo
 
