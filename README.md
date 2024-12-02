@@ -17,8 +17,7 @@ A sleek and responsive weather application that provides current weather, detail
 
 ## 🚀 Live Demo
 
-👉 [Check out the live demo](#)  
-*(Replace this link with your live deployment URL if available.)*
+https://echoscripter.github.io/Weather/
 
 ## 🛠️ Built With
 
