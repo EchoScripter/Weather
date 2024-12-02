@@ -13,9 +13,9 @@ A sleek and responsive weather application that provides current weather, detail
 
 ## 📸 Screenshots
 
-[image](https://github.com/user-attachments/assets/8f06e01e-8446-4e40-9d5d-b345cb92da04)
+(https://github.com/user-attachments/assets/8f06e01e-8446-4e40-9d5d-b345cb92da04)
 
-[image](https://github.com/user-attachments/assets/a3b90425-ab10-4963-b0b5-a4777af448e6)
+(https://github.com/user-attachments/assets/a3b90425-ab10-4963-b0b5-a4777af448e6)
 
 
 ## 🚀 Live Demo
