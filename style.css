@@ -11,8 +11,9 @@ body {
     display: flex; /* Allow flexbox layout */
     flex-direction: column; /* Arrange children vertically */
 }
+
 .heading {
-    padding: 10px;
+    padding: 12px;
 }
 .container {
     display: flex;
@@ -25,7 +26,7 @@ body {
 .weather-input {
     width: 30%; /* Fixed width for larger screens */
     background: #105c69;
-    padding: 1rem 2.5rem;
+    padding: 1.5rem 2.5rem;
     position: fixed; /* Keeps it fixed for larger screens */
     height: 100%; /* Fill the height */
 }
@@ -50,7 +51,7 @@ body {
     background: #f8f8f8;
     text-transform: capitalize;
     padding: 1rem;
-    font-size: 1.1rem; /* Increase base font size for readability */
+    font-size: 1.2rem; /* Increase base font size for readability */
     line-height: 1.5; /* Add line height for better readability */
     border-radius: 6px;
     width: 100%; /* Full width */
@@ -85,15 +86,15 @@ body {
 .Hightlight, .Forecast {
     display: grid;
     gap: 1rem;
-    font-size: 1rem; /* Base font size for legibility */
+    font-size: 1.3rem; /* Base font size for legibility */
 }
 
 .Hightlight {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    grid-template-columns: repeat(3, 2fr); /* 3 columns for larger screens */
 }
 
 .Forecast {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    grid-template-columns: repeat(4, 2fr); /* 4 columns for larger screens */
 }
 
 /* Forecast Card Hover Effect */
@@ -113,11 +114,12 @@ body {
 .Hightlight div:hover, .Forecast div:hover {
     transform: translateY(-10px) scale(1.05); /* Slightly enlarge the card */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
-    background-color: #4a90e2; /* Changes background color */
+    background-color: #03356d; /* Changes background color */
 }
 
 /* Hover Effects for Icons */
 .Hightlight i, .Forecast i {
+    font-size: 2 rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -135,8 +137,8 @@ body {
 }
 
 .temperature span {
-    font-size: 2rem;
-    margin-top: 20px;
+    font-size: 2.5rem;
+    margin-top: 25px;
 }
 
 /* Description, Date, and City Styling */
@@ -145,7 +147,7 @@ body {
 .weather-input .date,
 .weather-input .city {
     padding: 10px 0;
-    font-size: 1rem; /* Use readable font size */
+    font-size: 1.3rem; /* Use readable font size */
     line-height: 1.5; /* Add line height for better readability */
 }
 
