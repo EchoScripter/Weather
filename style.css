@@ -8,27 +8,28 @@
 
 body {
     height: 100vh;
-    display: flex; /* Allow flexbox layout */
-    flex-direction: column; /* Arrange children vertically */
+    display: flex;
+    flex-direction: column;
 }
 
 .heading {
     padding: 12px;
 }
+
 .container {
     display: flex;
-    flex-direction: row; /* Keep input and output side by side */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: row;
+    align-items: flex-start;
     width: 100%;
 }
 
 /* Weather Input Section */
 .weather-input {
-    width: 30%; /* Fixed width for larger screens */
+    width: 30%;
     background: #105c69;
-    padding: 1.5rem 2.5rem;
-    position: fixed; /* Keeps it fixed for larger screens */
-    height: 100%; /* Fill the height */
+    padding: 1rem 2.5rem;
+    position: fixed;
+    height: 100%;
 }
 
 .weatherIcon {
@@ -48,13 +49,13 @@ body {
 }
 
 .input-group input {
-    background: #f8f8f8;
+    background: #f0ece2;
     text-transform: capitalize;
     padding: 1rem;
-    font-size: 1.2rem; /* Increase base font size for readability */
-    line-height: 1.5; /* Add line height for better readability */
+    font-size: 1.2rem;
+    line-height: 1.5;
     border-radius: 6px;
-    width: 100%; /* Full width */
+    width: 100%;
     outline: none;
     border: none;
     padding-left: 4rem;
@@ -63,38 +64,37 @@ body {
 .input-group .fa-search {
     position: absolute;
     left: 1rem;
-    color: #909090;
+    color: #f0ece2;
     cursor: pointer;
     font-size: 22px;
 }
 
 /* Weather Output Section */
 .weather-output {
-    width: 70%; /* Occupy remaining space */
-    position: fixed; /* Keeps it fixed for larger screens */
+    width: 70%;
+    position: fixed;
     inset: 0;
-    margin-left: 30%; /* Adjust to match input width */
+    margin-left: 30%;
     padding-top: 2.5rem;
-    background: #f6f6f6;
+    background: #fefefe;
     overflow: auto;
-    height: 100%; /* Fill the height */
+    height: 100%;
     padding: 1rem;
-    padding-top: 2.5rem;
 }
 
 /* Styling for .Hightlight and .Forecast Sections */
 .Hightlight, .Forecast {
     display: grid;
     gap: 1rem;
-    font-size: 1.3rem; /* Base font size for legibility */
+    font-size: 1.3rem;
 }
 
 .Hightlight {
-    grid-template-columns: repeat(3, 2fr); /* 3 columns for larger screens */
+    grid-template-columns: repeat(3, 2fr);
 }
 
 .Forecast {
-    grid-template-columns: repeat(4, 2fr); /* 4 columns for larger screens */
+    grid-template-columns: repeat(4, 2fr);
 }
 
 /* Forecast Card Hover Effect */
@@ -112,20 +112,20 @@ body {
 }
 
 .Hightlight div:hover, .Forecast div:hover {
-    transform: translateY(-10px) scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
-    background-color: #03356d; /* Changes background color */
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #03356d;
 }
 
 /* Hover Effects for Icons */
 .Hightlight i, .Forecast i {
-    font-size: 2 rem;
+    font-size: 2rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .Hightlight div:hover i, .Forecast div:hover i {
-    color: #ffffff; /* Change icon color to white on hover */
-    transform: scale(1.2); /* Slightly enlarge the icon */
+    color: #ffffff;
+    transform: scale(1.2);
 }
 
 /* Specific Styling for Temperature */
@@ -147,13 +147,13 @@ body {
 .weather-input .date,
 .weather-input .city {
     padding: 10px 0;
-    font-size: 1.3rem; /* Use readable font size */
-    line-height: 1.5; /* Add line height for better readability */
+    font-size: 1.3rem;
+    line-height: 1.5;
 }
 
 .forecast-desc {
     color: white;
-    font-size: 1rem; /* Adjust font size for better readability */
+    font-size: 1rem;
     text-align: center;
     padding-bottom: 5px;
     font-style: italic;
@@ -168,26 +168,26 @@ body {
 /* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .weather-input {
-        width: 100%; /* Full width for smaller screens */
-        position: relative; /* Remove fixed positioning */
+        width: 100%;
+        position: relative;
     }
 
     .weather-output {
-        margin-left: 0; /* Remove left margin */
-        width: 100%; /* Full width for smaller screens */
-        position: relative; /* Remove fixed positioning */
+        margin-left: 0;
+        width: 100%;
+        position: relative;
     }
 
     .temperature {
-        font-size: 4rem; 
+        font-size: 4rem;
     }
 
     .Hightlight {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium-sized screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .Forecast {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium-sized screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .input-group input {
@@ -195,40 +195,40 @@ body {
     }
 
     .input-group .fa-search {
-        font-size: 24px; 
+        font-size: 24px;
     }
 }
 
 /* For mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
     .temperature {
-        font-size: 3.5rem; /* Increase font size for mobile devices */
+        font-size: 3.5rem;
     }
 
     .Hightlight div, .Forecast div {
-        height: auto; /* Let the height adjust automatically */
+        height: auto;
     }
 
     .Hightlight {
-        grid-template-columns: 1fr; /* 1 column for mobile devices */
+        grid-template-columns: 1fr;
     }
 
     .Forecast {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .input-group input {
-        font-size: 1.1rem; 
+        font-size: 1.1rem;
     }
 
     .input-group .fa-search {
-        font-size: 26px; 
+        font-size: 26px;
     }
 
     .weather-input .feelsLike,
     .weather-input .description,
     .weather-input .date,
     .weather-input .city {
-        font-size: 1.1rem; 
+        font-size: 1.1rem;
     }
 }
